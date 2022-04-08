@@ -19,5 +19,15 @@ class TestPlayerClass(unittest.TestCase):
         exp2 = 0
         self.assertEqual(res2, exp2)
 
+    def test_name(self):
+        """Selects a player name and tests if the name was
+        properly changed from the default."""
+        player1 = player.Player()
+        name = player1.select_name()
+        err = ""
+
+        self.assertNotEqual(err, player1.name)
+        self.assertEqual(player1.name, name)
+
 if __name__ == '__main__':
     unittest.main()
