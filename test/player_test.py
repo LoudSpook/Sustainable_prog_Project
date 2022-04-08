@@ -20,8 +20,8 @@ class TestPlayerClass(unittest.TestCase):
         self.assertEqual(res2, exp2)
 
     def test_name(self):
-        """Selects a player name and tests if the name was
-        properly changed from the default."""
+        """Select and changes a player name and test if the name was
+        properly changed both times (use two different names)."""
         player1 = player.Player()
         name = player1.select_name()
         err = ""
@@ -29,6 +29,9 @@ class TestPlayerClass(unittest.TestCase):
         self.assertNotEqual(err, player1.name)
         self.assertEqual(player1.name, name)
 
+        new_name = player1.change_name()
+        self.assertNotEqual(name, new_name)
+        self.assertEqual(player1.name, new_name)
 
 if __name__ == '__main__':
     unittest.main()
