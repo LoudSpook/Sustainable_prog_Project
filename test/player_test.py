@@ -33,5 +33,14 @@ class TestPlayerClass(unittest.TestCase):
         self.assertNotEqual(name, new_name)
         self.assertEqual(player1.name, new_name)
 
+    def test_add_score(self):
+        """Adds a score of 3 to the players total and
+        tests if it is added correctly"""
+        player1 = player.Player()
+        old_score = player1.score
+        player1.add_score(3)
+        self.assertNotEqual(0, player1.score)
+        self.assertNotEqual(old_score, player1.score)
+
 if __name__ == '__main__':
     unittest.main()
