@@ -15,3 +15,8 @@ v0.3.0 (2022-04-08)
 ------------------------
 Added the function that lets players change their names after they've
 chosen their starting name.
+
+v0.4.0 (2022-04-08)
+------------------------
+Added the function that adds a player score from the last round to
+a total player score for the whole match.
