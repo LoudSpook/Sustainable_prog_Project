@@ -10,3 +10,8 @@ v0.2.0 (2022-04-08)
 ------------------------
 Added the function that lets players choose their starting names.
 This function also makes sure player names don't contain "BOT" or are empty.
+
+v0.3.0 (2022-04-08)
+------------------------
+Added the function that lets players change their names after they've
+chosen their starting name.
