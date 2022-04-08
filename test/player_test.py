@@ -29,5 +29,6 @@ class TestPlayerClass(unittest.TestCase):
         self.assertNotEqual(err, player1.name)
         self.assertEqual(player1.name, name)
 
+
 if __name__ == '__main__':
     unittest.main()
