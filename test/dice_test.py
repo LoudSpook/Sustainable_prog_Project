@@ -14,3 +14,10 @@ class TestDiceClass(unittest.TestCase):
         res = die.faces
         exp = 6
         self.assertEqual(res, exp)
+
+    def test_roll_dice(self):
+        """Roll a dice and test the roll."""
+        die = dice.Dice()
+        roll = die.roll_dice()
+        expected = 1 <= roll <= die.faces
+        self.assertTrue(expected)
