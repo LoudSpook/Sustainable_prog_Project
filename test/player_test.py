@@ -1,4 +1,4 @@
-"""Unittesting"""
+"""Unittesting."""
 
 import unittest
 from game import player
