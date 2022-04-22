@@ -25,3 +25,7 @@ v0.5.0 (2022-04-22)
 ------------------------
 Added the function that instantiates the dice object with some
 default values.
+
+v0.6.0 (2022-04-22)
+------------------------
+Added the function that rolls a dice and returns the number of the roll.

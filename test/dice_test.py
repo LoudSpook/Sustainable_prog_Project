@@ -21,3 +21,12 @@ class TestDiceClass(unittest.TestCase):
         roll = die.roll_dice()
         expected = 1 <= roll <= die.faces
         self.assertTrue(expected)
+
+    def test_get_rolls_made(self):
+        """Roll dice, get the ammount of rolls made and test to see
+        if it's correct."""
+        die = dice.Dice()
+        default_ammount = 0
+        die.roll_dice()
+        roll_ammount = die.get_rolls_made()
+        self.assertNotEqual(default_ammount, roll_ammount)
