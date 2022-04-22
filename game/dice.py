@@ -23,5 +23,10 @@ class Dice():
         """Return rolls made."""
         return self.rolls_made
 
+    def clean_rolls_made(self):
+        """Reset rolls made back to 0."""
+        self.rolls_made = 0
+        return self.rolls_made
+
     if __name__ == '__main__':
         die = Dice()
