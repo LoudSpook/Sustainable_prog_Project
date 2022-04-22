@@ -10,3 +10,7 @@ class TestDiceClass(unittest.TestCase):
         """Instantiate a dice object and test its values."""
         die = dice.Dice()
         self.assertIsInstance(die, dice.Dice)
+
+        res = die.faces
+        exp = 6
+        self.assertEqual(res, exp)
