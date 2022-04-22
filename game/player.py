@@ -28,12 +28,6 @@ class Player():
         print("Name set!")
         return self.name
 
-    def add_score(self, rolls):
-        """Add a players score from that round to their total."""
-        self.score += rolls
-
-        return self.score
-
     def change_name(self):
         """Let players change their names."""
         current_name = self.name
@@ -46,6 +40,12 @@ class Player():
             print("Name changed!")
 
         return self.name
+
+    def add_score(self, rolls):
+        """Add a players score from that round to their total."""
+        self.score += rolls
+
+        return self.score
 
 
 if __name__ == '__main__':
