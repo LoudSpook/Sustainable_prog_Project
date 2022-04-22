@@ -33,3 +33,7 @@ Added the function that rolls a dice and returns the number of the roll.
 v0.7.0 (2022-04-22)
 ------------------------
 Added the function that retrieves the amount of rolls made.
+
+v0.8.0 (2022-04-22)
+------------------------
+Added the function that resets the amount of rolls made back to 0.
