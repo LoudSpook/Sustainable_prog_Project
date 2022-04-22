@@ -29,3 +29,7 @@ default values.
 v0.6.0 (2022-04-22)
 ------------------------
 Added the function that rolls a dice and returns the number of the roll.
+
+v0.7.0 (2022-04-22)
+------------------------
+Added the function that retrieves the amount of rolls made.
