@@ -30,3 +30,17 @@ class TestDiceClass(unittest.TestCase):
         die.roll_dice()
         roll_amount = die.get_rolls_made()
         self.assertNotEqual(default_amount, roll_amount)
+
+    def test_clean_rolls_made(self):
+        """Roll a dice a few times then reset the number of rolls made
+        back to 0 and test if rolls_made was reset."""
+        die = dice.Dice()
+        for x in range(3):
+            die.roll_dice()
+
+        die.clean_rolls_made()
+        exp = 0
+        self.assertEqual(exp, die.get_rolls_made())
+
+if __name__ == '__main__':
+    unittest.main()
