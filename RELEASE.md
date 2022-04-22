@@ -20,3 +20,8 @@ v0.4.0 (2022-04-08)
 ------------------------
 Added the function that adds a player score from the last round to
 a total player score for the whole match.
+
+v0.5.0 (2022-04-22)
+------------------------
+Added the function that instantiates the dice object with some
+default values.
