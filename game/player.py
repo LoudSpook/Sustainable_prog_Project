@@ -46,7 +46,3 @@ class Player():
         self.score += rolls
 
         return self.score
-
-
-if __name__ == '__main__':
-    player = Player()
