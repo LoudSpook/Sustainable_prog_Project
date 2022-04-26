@@ -11,6 +11,7 @@ class Dice():
     def __init__(self):
         """Instantiate object."""
         self.rolls_made = 0
+        self.turn_total = 0
         random.seed()
 
     def roll_dice(self):
