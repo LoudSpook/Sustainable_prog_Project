@@ -15,3 +15,12 @@ class testBotClass(unittest.TestCase):
     def test_init_bot_object(self):
         """Test an instantiated bot object's default values."""
         self.assertIsInstance(self.bot, bot.Bot)
+
+        exp_name = "BOT"
+        self.assertEqual(self.bot.name, exp_name)
+
+        exp_score = 0
+        self.assertEqual(self.bot.score, exp_score)
+
+        exp_rolls_made = 0
+        self.assertEqual(self.bot.rolls_made, exp_rolls_made)
