@@ -17,7 +17,8 @@ class testBotClass(unittest.TestCase):
         self.assertIsInstance(self.bot, bot.Bot)
 
         exp_name = "BOT"
-        self.assertEqual(self.bot.name, exp_name)
+        res_name = self.bot.name
+        self.assertEqual(res_name, exp_name)
 
         exp_score = 0
         self.assertEqual(self.bot.score, exp_score)

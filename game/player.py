@@ -4,10 +4,11 @@
 class Player():
     """Handle the player object."""
 
+    name = ""
+    score = 0
+
     def __init__(self):
-        """Set default values to the object."""
-        self.name = ""
-        self.score = 0
+        """Instantiate the object."""
 
     def select_name(self):
         """Let players select their name."""

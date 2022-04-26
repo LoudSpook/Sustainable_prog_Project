@@ -7,11 +7,11 @@ class Dice():
     """Handle the dice object."""
 
     faces = 6
+    rolls_made = 0
+    turn_total = 0
 
     def __init__(self):
         """Instantiate object."""
-        self.rolls_made = 0
-        self.turn_total = 0
         random.seed()
 
     def roll_dice(self):
