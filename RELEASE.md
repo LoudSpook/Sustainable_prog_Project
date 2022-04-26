@@ -37,3 +37,7 @@ Added the function that retrieves the amount of rolls made.
 v0.8.0 (2022-04-22)
 ------------------------
 Added the function that resets the amount of rolls made back to 0.
+
+v0.9.0 (2022-04-26)
+------------------------
+Added the constructor for instantiating an object of the bot class.
