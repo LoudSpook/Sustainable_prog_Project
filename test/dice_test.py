@@ -13,7 +13,7 @@ class TestDiceClass(unittest.TestCase):
         del self.dice
 
     def test_init_dice_object(self):
-        """Instantiate a dice object and test its values."""
+        """Test an instantiated dice object's default values."""
         self.assertIsInstance(self.dice, dice.Dice)
 
         res = self.dice.faces
