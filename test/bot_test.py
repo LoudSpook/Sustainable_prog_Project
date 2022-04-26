@@ -25,3 +25,11 @@ class testBotClass(unittest.TestCase):
 
         exp_rolls_made = 0
         self.assertEqual(self.bot.rolls_made, exp_rolls_made)
+
+    def test_bot_difficulty(self):
+        """Test if the difficulty variable is properly returned."""
+        difficulty = self.bot.select_difficulty()
+        err = null
+
+        self.assertNotEqual(err, self.bot.difficulty)
+        self.assertEqual(self.bot.select_difficulty, difficulty)
