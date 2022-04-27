@@ -43,8 +43,9 @@ class Player():
 
         return self.name
 
-    def add_score(self, rolls):
+    def add_score(self, score_to_add, rolls_to_add):
         """Add a players score from that round to their total."""
-        self.score += rolls
+        self.score += score_to_add
+        self.rolls += rolls_to_add
 
         return self.score

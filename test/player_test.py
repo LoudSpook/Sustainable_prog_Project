@@ -48,9 +48,15 @@ class TestPlayerClass(unittest.TestCase):
         """Add a score of 3 to the players total and
         test if it is added correctly."""
         old_score = self.player.score
-        self.player.add_score(3)
+        old_rolls = self.player.rolls
+
+        self.player.add_score(12, 2)
+
         self.assertNotEqual(0, self.player.score)
         self.assertNotEqual(old_score, self.player.score)
+        
+        self.assertNotEqual(0, self.player.rolls)
+        self.assertNotEqual(old_rolls, self.player.rolls)
 
 if __name__ == '__main__':
     unittest.main()
