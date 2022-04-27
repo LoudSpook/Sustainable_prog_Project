@@ -86,7 +86,7 @@ codestyle: black
 #
 unittest:
 	@$(call MESSAGE,$@)
-	 $(PYTHON) -m unittest discover . "bot_test.py"
+	 $(PYTHON) -m unittest discover . "player_test.py"
 
 coverage:
 	@$(call MESSAGE,$@)

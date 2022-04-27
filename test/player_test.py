@@ -17,13 +17,19 @@ class TestPlayerClass(unittest.TestCase):
         test its default values."""
         self.assertIsInstance(self.player, player.Player)
 
-        res1 = self.player.name
-        exp1 = ""
-        self.assertEqual(res1, exp1)
+        res_name = self.player.name
+        exp_name = ""
+        self.assertEqual(res_name, exp_name)
 
-        res2 = self.player.score
-        exp2 = 0
-        self.assertEqual(res2, exp2)
+        res_score = self.player.score
+        exp_score = 0
+        self.assertEqual(res_score, exp_score)
+
+        res_rolls = self.player.rolls
+        exp_rolls = 0
+        self.assertEqual(res_rolls, exp_rolls)
+
+
 
     def test_name(self):
         """Select and change a player's name and test if the name was
