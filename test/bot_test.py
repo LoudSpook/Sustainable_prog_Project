@@ -33,3 +33,6 @@ class testBotClass(unittest.TestCase):
 
         self.assertNotEqual(err, self.bot.difficulty)
         self.assertEqual(self.bot.difficulty, difficulty)
+
+if __name__ == '__main__':
+    unittest.main()

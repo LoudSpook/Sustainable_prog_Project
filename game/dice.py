@@ -18,14 +18,16 @@ class Dice():
         """Roll a dice."""
         roll = random.randint(1, self.faces)
         self.rolls_made += 1
+        self.turn_total += roll
 
         return roll
 
-    def get_rolls_made(self):
-        """Return rolls made."""
-        return self.rolls_made
+    def get_score(self):
+        """Return rolls made and turn total."""
+        return self.rolls_made, self.turn_total
 
-    def clean_rolls_made(self):
-        """Reset rolls made back to 0."""
+    def clean_score(self):
+        """Reset rolls made and turn total back to 0."""
         self.rolls_made = 0
-        return self.rolls_made
+        self.turn_total = 0
+        return self.rolls_made, self.turn_total
