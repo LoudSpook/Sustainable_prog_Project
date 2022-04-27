@@ -41,3 +41,8 @@ Added the function that resets the amount of rolls made back to 0.
 v0.9.0 (2022-04-26)
 ------------------------
 Added the constructor for instantiating an object of the bot class.
+
+v0.10.0 (2022-04-27)
+------------------------
+Added a function allowing users to select the difficulty of the computer
+opponent.
