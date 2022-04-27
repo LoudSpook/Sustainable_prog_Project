@@ -22,9 +22,13 @@ class Dice():
 
         return roll
 
-    def get_score(self):
-        """Return rolls made and turn total."""
-        return self.rolls_made, self.turn_total
+    def get_rolls_made(self):
+        """Return rolls made."""
+        return self.rolls_made
+
+    def get_turn_total(self):
+        """Return turn total."""
+        return self.turn_total
 
     def clean_score(self):
         """Reset rolls made and turn total back to 0."""

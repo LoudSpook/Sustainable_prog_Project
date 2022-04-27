@@ -26,13 +26,21 @@ class TestDiceClass(unittest.TestCase):
         expected = 1 <= roll <= self.dice.faces
         self.assertTrue(expected)
 
-    def test_get_score(self):
+    def test_get_rolls_made(self):
         """Roll dice, get the amount of rolls made and test to see
         if it's correct."""
         default_amount = 0
         self.dice.roll_dice()
-        roll_amount = self.dice.get_score()
+        roll_amount = self.dice.get_rolls_made()
         self.assertNotEqual(default_amount, roll_amount)
+
+    def test_get_turn_total(self):
+        """Roll dice, get the turn total score form the rolls and test
+        to see if it's correct."""
+        default_turn_total = 0
+        self.dice.roll_dice()
+        turn_total = self.dice.get_turn_total()
+        self.assertNotEqual(default_turn_total, turn_total)
 
     def test_clean_score(self):
         """Roll a dice a few times then reset the number of rolls made
@@ -41,8 +49,10 @@ class TestDiceClass(unittest.TestCase):
             self.dice.roll_dice()
 
         self.dice.clean_score()
-        exp = 0, 0
-        self.assertEqual(exp, self.dice.get_score())
+        exp_rolls_made = 0
+        exp_turn_total = 0
+        self.assertEqual(exp_rolls_made, self.dice.get_rolls_made())
+        self.assertEqual(exp_turn_total, self.dice.get_turn_total())
 
 if __name__ == '__main__':
     unittest.main()
