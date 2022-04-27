@@ -29,7 +29,7 @@ class testBotClass(unittest.TestCase):
     def test_bot_difficulty(self):
         """Test if the difficulty variable is properly returned."""
         difficulty = self.bot.select_difficulty()
-        err = null
+        err = None
 
         self.assertNotEqual(err, self.bot.difficulty)
-        self.assertEqual(self.bot.select_difficulty, difficulty)
+        self.assertEqual(self.bot.difficulty, difficulty)
