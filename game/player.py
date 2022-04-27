@@ -6,6 +6,7 @@ class Player():
 
     name = ""
     score = 0
+    rolls = 0
 
     def __init__(self):
         """Instantiate the object."""
