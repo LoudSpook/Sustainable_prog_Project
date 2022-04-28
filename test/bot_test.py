@@ -30,7 +30,7 @@ class testBotClass(unittest.TestCase):
         res_skips = self.bot.skips
         self.assertEqual(exp_skips, res_skips)
 
-        exp_max_rolls = 0
+        exp_max_rolls = 5
         res_max_rolls = self.bot.max_rolls
         self.assertEqual(exp_max_rolls, res_max_rolls)
 

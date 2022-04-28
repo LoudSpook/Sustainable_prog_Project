@@ -7,6 +7,8 @@ class Bot():
     name = "BOT"
     score = 0
     rolls = 0
+    skips = 0
+    max_rolls = 5
 
     def __init___(self):
         """Instantiate object."""
@@ -20,8 +22,10 @@ class Bot():
             print("Difficulty set to easy")
         elif self.difficulty == 2:
             print("Difficulty set to medium")
+            self.skips = 1
         elif self.difficulty == 3:
             print("Difficulty set to hard")
+            self.skips = 2
 
         return self.difficulty
 
