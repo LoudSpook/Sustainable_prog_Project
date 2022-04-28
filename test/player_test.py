@@ -45,8 +45,8 @@ class TestPlayerClass(unittest.TestCase):
         self.assertEqual(self.player.name, new_name)
 
     def test_add_score(self):
-        """Add a score of 3 to the players total and
-        test if it is added correctly."""
+        """Add a score of 12 and 2 rolls to the players total and
+        test if they're added correctly."""
         old_score = self.player.score
         old_rolls = self.player.rolls
 
@@ -54,7 +54,7 @@ class TestPlayerClass(unittest.TestCase):
 
         self.assertNotEqual(0, self.player.score)
         self.assertNotEqual(old_score, self.player.score)
-        
+
         self.assertNotEqual(0, self.player.rolls)
         self.assertNotEqual(old_rolls, self.player.rolls)
 

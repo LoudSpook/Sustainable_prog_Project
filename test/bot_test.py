@@ -34,5 +34,19 @@ class testBotClass(unittest.TestCase):
         self.assertNotEqual(err, self.bot.difficulty)
         self.assertEqual(self.bot.difficulty, difficulty)
 
+    def test_add_score(self):
+        """Add a score of 12 and 2 rolls to the bots total and test
+        if they're added correctly."""
+        old_score = self.bot.score
+        old_rolls = self.bot.rolls
+
+        self.bot.add_score(12, 2)
+
+        self.assertNotEqual(0, self.bot.score)
+        self.assertNotEqual(old_score, self.bot.score)
+
+        self.assertNotEqual(0, self.bot.rolls)
+        self.assertNotEqual(old_rolls, self.bot.rolls)
+
 if __name__ == '__main__':
     unittest.main()

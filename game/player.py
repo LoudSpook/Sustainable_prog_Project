@@ -48,4 +48,4 @@ class Player():
         self.score += score_to_add
         self.rolls += rolls_to_add
 
-        return self.score
+        return self.score, self.rolls

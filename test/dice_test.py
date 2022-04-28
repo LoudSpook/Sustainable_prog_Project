@@ -43,8 +43,8 @@ class TestDiceClass(unittest.TestCase):
         self.assertNotEqual(default_turn_total, turn_total)
 
     def test_clean_score(self):
-        """Roll a dice a few times then reset the number of rolls made
-        back to 0 and test if rolls_made was reset."""
+        """Test if rolls_made and turn_total are properly reset after rolls
+        are made."""
         for x in range(3):
             self.dice.roll_dice()
 
