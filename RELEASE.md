@@ -46,3 +46,8 @@ v0.10.0 (2022-04-27)
 ------------------------
 Added a function allowing users to select the difficulty of the computer
 opponent.
+
+v0.11.0 (2022-04-28)
+-----------------------
+Added a function to add a bots round score and rolls to its total score
+and rolls.
