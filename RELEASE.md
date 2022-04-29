@@ -51,3 +51,12 @@ v0.11.0 (2022-04-28)
 -----------------------
 Added a function to add a bots round score and rolls to its total score
 and rolls.
+
+v0.12.0 (2022-04-28)
+-----------------------
+Display class added with a constructor.
+
+v0.13.0 (2022-04-29)
+-----------------------
+Functions for displaying a start menu and the rules implemented in the
+display class.
