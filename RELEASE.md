@@ -64,3 +64,8 @@ display class.
 v0.14.0 (2022-04-30)
 -----------------------
 Added class and functions for displaying graphics after rolling a dice.
+
+v0.15.0 (2022-04-30)
+-----------------------
+In display class, added a function that displays a between-roll menu.
+This menu should be displayed after every roll.
