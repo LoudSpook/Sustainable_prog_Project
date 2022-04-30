@@ -36,3 +36,15 @@ class testDisplayClass(unittest.TestCase):
         "After you've rolled a 1 or decided to hold, it's next players turn.\n"
         "First to a score total of 100 wins.\n"
         "Good luck and have fun!")
+
+    @mock.patch("game.display.print")
+    def test_print_game_menu(self, mock_print_game_menu):
+        self.display.print_game_menu()
+        mock_print_game_menu.assert_called_with(
+        "-------------------------\n"
+        "1. Roll\n"
+        "2. Hold\n"
+        "3. Change name\n"
+        "4. Restart\n"
+        "5. Exit"
+        )
