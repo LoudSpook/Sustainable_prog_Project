@@ -69,3 +69,8 @@ v0.15.0 (2022-04-30)
 -----------------------
 In display class, added a function that displays a between-roll menu.
 This menu should be displayed after every roll.
+
+v0.16.0 (2022-04-30)
+-----------------------
+Added the game class. This class handles most of the game mechanics and
+functions.
