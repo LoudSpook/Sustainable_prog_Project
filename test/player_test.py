@@ -2,6 +2,7 @@
 
 import unittest
 from game import player
+from unittest import mock
 
 class TestPlayerClass(unittest.TestCase):
     """Testing the class."""
@@ -58,5 +59,8 @@ class TestPlayerClass(unittest.TestCase):
         self.assertNotEqual(0, self.player.rolls)
         self.assertNotEqual(old_rolls, self.player.rolls)
 
-if __name__ == '__main__':
-    unittest.main()
+    @mock.patch("game.player.print")
+    def test_cheat(self, mock_cheat):
+        self.player.cheat()
+        mock_cheat.assert_called_with("Cheater...")
+        self.assertEqual(100, self.player.score)

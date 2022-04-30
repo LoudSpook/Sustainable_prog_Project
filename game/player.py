@@ -49,3 +49,8 @@ class Player():
         self.rolls += rolls_to_add
 
         return self.score, self.rolls
+
+    def cheat(self):
+        """Let's a player cheat to skip to the end."""
+        self.score = 100
+        print("Cheater...")
