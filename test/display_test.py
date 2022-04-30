@@ -20,8 +20,13 @@ class testDisplayClass(unittest.TestCase):
     @mock.patch("game.display.print")
     def test_print_start_menu(self, mock_print_start_menu):
         self.display.print_start_menu()
-        mock_print_start_menu.assert_called_with("-------------------------\n"
-        "1. Single player\n2. Multiplayer\n3. Exit\n-------------------------")
+        mock_print_start_menu.assert_called_with(
+        "-------------------------\n"
+        "1. Singleplayer\n"
+        "2. Multiplayer\n"
+        "3. Rules\n"
+        "4. Exit\n"
+        "-------------------------")
 
     @mock.patch("game.display.print")
     def test_print_rules(self, mock_print_rules):

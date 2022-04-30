@@ -53,6 +53,3 @@ class TestDiceClass(unittest.TestCase):
         exp_turn_total = 0
         self.assertEqual(exp_rolls_made, self.dice.get_rolls_made())
         self.assertEqual(exp_turn_total, self.dice.get_turn_total())
-
-if __name__ == '__main__':
-    unittest.main()

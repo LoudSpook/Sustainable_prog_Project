@@ -55,6 +55,3 @@ class testBotClass(unittest.TestCase):
 
         self.assertNotEqual(0, self.bot.rolls)
         self.assertNotEqual(old_rolls, self.bot.rolls)
-
-if __name__ == '__main__':
-    unittest.main()

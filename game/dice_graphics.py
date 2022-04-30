@@ -5,7 +5,7 @@ class DiceGraphics():
 
     def __init__(self):
         """Instantiate object."""
-        
+
     def dice_one(self):
         print(
         " -----------\n"
@@ -59,3 +59,6 @@ class DiceGraphics():
         "|  o  o  o  |\n"
         " -----------"
         )
+
+    if __name__ == '__main__':
+        dice_six()

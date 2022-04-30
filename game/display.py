@@ -9,9 +9,10 @@ class Display():
 
     def print_start_menu(self):
         print("-------------------------\n"
-        "1. Single player\n"
+        "1. Singleplayer\n"
         "2. Multiplayer\n"
-        "3. Exit\n"
+        "3. Rules\n"
+        "4. Exit\n"
         "-------------------------")
 
     def print_rules(self):

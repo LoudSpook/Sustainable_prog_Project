@@ -17,6 +17,7 @@ class Dice():
     def roll_dice(self):
         """Roll a dice."""
         roll = random.randint(1, self.faces)
+
         self.rolls_made += 1
         self.turn_total += roll
 
