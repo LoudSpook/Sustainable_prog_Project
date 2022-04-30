@@ -60,3 +60,7 @@ v0.13.0 (2022-04-29)
 -----------------------
 Functions for displaying a start menu and the rules implemented in the
 display class.
+
+v0.14.0 (2022-04-30)
+-----------------------
+Added class and functions for displaying graphics after rolling a dice.
