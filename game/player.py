@@ -50,7 +50,12 @@ class Player():
 
         return self.score, self.rolls
 
+    def clean_score(self):
+        """Reset a players score and rolls to 0."""
+        self.score = 0
+        self.rolls = 0
+
     def cheat(self):
         """Let's a player cheat to skip to the end."""
         self.score = 100
-        print("Cheater...")
+        print("\nCheater...")

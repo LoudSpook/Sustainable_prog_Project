@@ -1,5 +1,6 @@
 """Handle things related to the display of menus."""
 
+import time
 
 class Display():
     """Handle the display object."""
@@ -8,6 +9,7 @@ class Display():
         """Instantiate object."""
 
     def print_start_menu(self):
+        time.sleep(1)
         print("-------------------------\n"
         "1. Singleplayer\n"
         "2. Multiplayer\n"
@@ -16,6 +18,7 @@ class Display():
         "-------------------------")
 
     def print_rules(self):
+        time.sleep(1)
         print("RULES\n"
         "-------------------------\n"
         "Take turns rolling the die.\n"
@@ -28,6 +31,7 @@ class Display():
         "Good luck and have fun!")
 
     def print_game_menu(self):
+        time.sleep(1)
         print(
         "-------------------------\n"
         "1. Roll\n"
