@@ -74,3 +74,9 @@ v0.16.0 (2022-04-30)
 -----------------------
 Added the game class. This class handles most of the game mechanics and
 functions.
+
+v1.0.0 (2022-05-02)
+-----------------------
+The first fully playable version. Major additions to the game class
+to make the game work. Added a main class for running the game.
+Minor changes to other classes to make the game properly play.
