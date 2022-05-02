@@ -1,8 +1,9 @@
 """Run the game."""
 
-import game
-import display
-import player
+from game import game
+from game import display
+from game import player
+from game import highscore
 
 class Main():
     """Handle running the game."""
@@ -45,6 +46,8 @@ class Main():
 
                     if player_won:
                         print(player1.name + " won!")
+                        highscore.Highscore().add_highscore(player1.rolls, player1.name)
+                        print("Added rolls to highscore list")
                         game.Game().exit_choice()
 
                     if reset:
@@ -68,6 +71,10 @@ class Main():
 
                     if player_won:
                         print(player1.name + " won!")
+                        highscore.Highscore().add_highscore(
+                        player1.rolls, player1.name
+                        )
+                        print("Added rolls to highscore list")
                         game.Game().exit_choice()
 
                     if reset:
@@ -81,6 +88,10 @@ class Main():
 
                     if player_won:
                         print(player2.name + " won!")
+                        highscore.Highscore().add_highscore(
+                        player2.rolls, player2.name
+                        )
+                        print("Added rolls to highscore list")
                         game.Game().exit_choice()
 
                     if reset:

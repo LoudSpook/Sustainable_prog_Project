@@ -62,5 +62,5 @@ class TestPlayerClass(unittest.TestCase):
     @mock.patch("game.player.print")
     def test_cheat(self, mock_cheat):
         self.player.cheat()
-        mock_cheat.assert_called_with("Cheater...")
+        mock_cheat.assert_called_with("\nCheater...")
         self.assertEqual(100, self.player.score)

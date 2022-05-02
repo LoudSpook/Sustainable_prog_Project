@@ -1,11 +1,11 @@
 """Hold functions used while playing the game."""
 
-import dice
-import player
-import bot
-import display
+from game import dice
+from game import player
+from game import bot
+from game import display
+from game import dice_graphics
 import sys
-import dice_graphics
 import time
 
 class Game():
