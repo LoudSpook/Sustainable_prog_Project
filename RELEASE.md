@@ -80,3 +80,8 @@ v1.0.0 (2022-05-02)
 The first fully playable version. Major additions to the game class
 to make the game work. Added a main class for running the game.
 Minor changes to other classes to make the game properly play.
+
+v1.1.0 (2022-05-02)
+-----------------------
+Added the highscore class. This class handles adding high scores
+in order in the textfile called highscores.
