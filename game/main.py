@@ -8,13 +8,16 @@ from game import highscore
 class Main():
     """Handle running the game."""
 
+    keep_going = True
+    player_turn = 1
+    bot = False
+    game_in_progress = True
 
-    def main():
+    def __init__(self):
+        """Initiate object."""
+
+    def main(self):
         """Run the game."""
-        keep_going = True
-        player_turn = 1
-        bot = False
-        game_in_progress = True
 
         print("Welcome to the game!")
         display.Display().print_start_menu()
@@ -102,5 +105,6 @@ class Main():
 
 
 
-    if __name__ == '__main__':
-        main()
+if __name__ == '__main__':
+    main1 = Main()
+    main1.main()
