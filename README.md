@@ -1,201 +1,117 @@
-Python development project template
-==========================
+Instructions of how to install and run project
 
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+Basic description of the program
+-----------------------
+This is a representation of a simple dice game called pig.
+You can play against another player or a computer controlled opponent. This program also adds every players score to a textfile called "highscores".
 
-A template for a Python development project.
+The rules of the game are simple. You start with 0 points and take turns rolling a dice. You can keeping rolling the dice until you either roll a 1 or choose to hold. If you choose to hold, all your roles from that turn is added to your score, then it's the other players turn. If you roll a 1, you get none of the points from that turn, then it's the other players turn.
+First to get to 100 points and hold wins.
+When you get to 100 points the game will save your name and the amount of rolls you made that game to the high scores list. The more rolls you made, the further down on the list you get placed.
+Don't worry, your score is kept if you change name mid-game.
 
-[[_TOC_]]
+This program is menu driven, every time you're able to take an action, you will be shown a menu of options and be prompted to choose.
 
+For testing purposes, there is a cheat function. To use this function you need to be in-game at the place where the game prompts you to choose from a menu where you can roll, hold, reset and exit.
+Instead of choosing any of these options, enter 0.
+Now you're a cheater!
 
+Computer opponent intelligence
+-----------------------
+The intelligence of this computer opponent is not really intelligence at all, it's just different levels of cheating.
+You can choose from three different difficulties, easy, medium or hard.
+Depending on what difficulty you choose, the computer opponent will start with 0, 20 or 40 points. Harder difficulty, means a bigger head start for the bot.
 
-Get going
---------------------------
-
-This is how you can work with the development environment.
-
-
-
-### Check version of Python
-
-Check what version of Python you have. The Makefile uses `PYTHON=python` as default.
-
-```
-# Check you Python installation
-make version
-```
-
-If you have another naming of the Python executable then you can solve that using an environment variable. This is common on Mac and Linux.
-
-```
-# Set the environment variable to be your python executable
-export PYTHON=python3
-make version
-```
-
-Read more on [GNU make](https://www.gnu.org/software/make/manual/make.html).
-
-
-
-### Python virtual environment
-
-Install a Python virtual environment and activate it.
+How to install and run the program
+-----------------------
+There are two ways of installing this game.
 
 ```
-# Create the virtual environment
-make venv
-
-# Activate on Windows
-. .venv/Scripts/activate
-
-# Activate on Linx/Mac
-. .venv/bin/activate
+1. Clone the repository to a folder of your choice. Done!
+```
+```
+2. Download the zip file and extract the contents to a folder of your choice. Done!
 ```
 
-When you are done you can leave the venv using the command `deactivate`.
-
-Read more on [Python venv](https://docs.python.org/3/library/venv.html).
-
-
-
-### Install the dependencies
-
-Install the PIP packages that are dependencies to the project and/or the development environment. The dependencies are documented in the `requirements.txt`.
-
-Do not forget to check that you have an active venv.
+To run the game you can choose to either open the folder containing the project, open the folder called "game" and executing the "main.py" file. Or you can navigate to the folder containing the project in your terminal then enter the command below.
 
 ```
-# Do install them
-make install
-
-# Check what is installed
-make installed
-```
-
-Read more on [Python PIP](https://pypi.org/project/pip/).
-
-
-
-### Run the code
-
-The example program can be started like this.
-
-```
-# Execute the main program
 python game/main.py
 ```
 
-All code is stored below the directory `game/`.
-
-
-
-### Run the validators
-
-You can run the static code validators like this. They check the sourcecode and exclude the testcode.
+Installation for testing purposes
+-----------------------
+Before you can test the program you will have to install a few things. While in your terminal, navigate to the folder containing the project. Then enter the command below.
 
 ```
-# Run each at a time
-make flake8
-make pylint
-
-# Run all on the same time
-make lint
+make venv
 ```
 
-You might need to update the Makefile if you change the name of the source directory currently named `game/`.
+This will install venv.
 
-Read more on:
-
-* [flake8](https://flake8.pycqa.org/en/latest/)
-* [pylint](https://pylint.org/)
-
-
-
-### Run the unittests
-
-You can run the unittests like this. The testfiles are stored in the `test/` directory.
+Then enter this command to activate venv.
 
 ```
-# Run unttests without coverage
+# For Windows
+. .venv/Scripts/activate
+```
+
+```
+# For Mac and Linux
+. .venv/bin/activate
+```
+
+Then enter this command to install everything from "requirements.txt".
+
+```
+make install
+```
+
+When you're done, enter this to stop using venv.
+
+```
+deactivate
+```
+
+IMPORTANT
+Before testing, open the files "main.py" and "game.py" in any text editor. Make sure every import statement at the top has "from game" in front of it, except for "import sys" and "import time" in "game.py".
+Whenever you want to run the program regularly, you have to remove the "from game" parts again.
+This is a weird quirk I couldn't find a solution to.
+
+Run the testsuite
+-----------------------
+Open the Makefile and find the command called "unittest". At the end of the command there should be some quotation marks. If you want to run all of the tests, make sure it says "*_test.py" between the quoteation marks. If you want to run part of the tests, type the name of the file containing the tests you want to run between the quotation marks.
+Then enter the following command into the terminal.
+
+```
 make unittest
+```
 
-# Run unittests with coverage
+IMPORTANT
+When the tests run, they might ask you to enter difficulty, enter 1, 2 or 3. They might also ask you to enter a name, this will happen twice, put a different name each time.
+
+Get coverage
+-----------------------
+To get the tests coverage report, enter the following command into the terminal. This will also run all tests. Follow the instructions above.
+
+```
 make coverage
-# You also need to add "from game" in front of every import in game.py and main.py. Except for import sys and import time in game.py.
-
-# Run the linters and the unittests with coverage
-make test
 ```
 
-You can open a web browser to inspect the code coverage as a generated HTML report.
-
+Then open it by entering this.
 ```
-firefox htmlcov/index.html
-```
-
-Read more on:
-
-* [unittest](https://docs.python.org/3/library/unittest.html)
-* [coverage](https://coverage.readthedocs.io/)
-
-
-
-### Run parts of the testsuite
-
-You can also run parts of the testsuite, for examples files or methods in files.
-
-You can run all tests from a testfile.
-
-```
-# Run a testfile
-python -m unittest test.test_game
-```
-
-You can also run a single testcase from a file.
-
-```
-# Run a test method, in a class, in a testfile
-python -m unittest test.test_game.TestGameClass.test_init_default_object
+start htmlcov/index.html
 ```
 
 
+Run the whole testsuite
+-----------------------
+To run the whole testsuite you can open the Makefile, find the command named "unittest", and make sure it says "*_test.py" between the quotation marks at the end. Then enter t
 
-### Remove generated files
-
-You can remove all generated files by this.
-
-```
-# Remove files generated for tests or caching
-make clean
-
-# Do also remove all you have installed
-make clean-all
-```
-
-
-
-Optional targets
---------------------------
-
-These targets might be helpful when running your project.
-
-
-
-### Codestyle with black
-
-You can unify the codestyle using black. Running black will change your source code to have a codestyle according to black codestyle.
+Documentation and UML
+-----------------------
+The easiest way to regenerate the documentation for this project is to use the command below in the terminal.
 
 ```
-# Same same, different names
-make black
-make codestyle
+make doc
 ```
-
-Read more on [black](https://pypi.org/project/black/).
-
-
-
-More targets
---------------------------
-
-The Makefile contains more targets, they are however not yet tested on this directory structure.

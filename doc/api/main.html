@@ -31,8 +31,8 @@
 
 import game
 import display
-import player
 import highscore
+
 
 class Main():
     &#34;&#34;&#34;Handle running the game.&#34;&#34;&#34;
@@ -47,7 +47,6 @@ class Main():
         print(&#34;Welcome to the game!&#34;)
         display.Display().print_start_menu()
 
-
         while keep_going:
             choice = input(&#34;..: &#34;)
 
@@ -60,7 +59,7 @@ class Main():
                 keep_going = False
             elif choice == &#39;3&#39;:
                 display.Display().print_rules()
-                keep_going = False
+                keep_going = True
             elif choice == &#39;4&#39;:
                 game.Game().exit_choice()
             else:
@@ -74,7 +73,10 @@ class Main():
 
                     if player_won:
                         print(player1.name + &#34; won!&#34;)
-                        highscore.Highscore().add_highscore(player1.rolls, player1.name)
+                        highscore.Highscore().add_highscore(
+                            player1.rolls,
+                            player1.name
+                        )
                         print(&#34;Added rolls to highscore list&#34;)
                         game.Game().exit_choice()
 
@@ -100,7 +102,7 @@ class Main():
                     if player_won:
                         print(player1.name + &#34; won!&#34;)
                         highscore.Highscore().add_highscore(
-                        player1.rolls, player1.name
+                            player1.rolls, player1.name
                         )
                         print(&#34;Added rolls to highscore list&#34;)
                         game.Game().exit_choice()
@@ -117,7 +119,7 @@ class Main():
                     if player_won:
                         print(player2.name + &#34; won!&#34;)
                         highscore.Highscore().add_highscore(
-                        player2.rolls, player2.name
+                            player2.rolls, player2.name
                         )
                         print(&#34;Added rolls to highscore list&#34;)
                         game.Game().exit_choice()
@@ -127,8 +129,6 @@ class Main():
                         player1.clean_score()
                         player2.clean_score()
                         player_turn = 1
-
-
 
     if __name__ == &#39;__main__&#39;:
         main()</code></pre>
@@ -165,7 +165,6 @@ class Main():
         print(&#34;Welcome to the game!&#34;)
         display.Display().print_start_menu()
 
-
         while keep_going:
             choice = input(&#34;..: &#34;)
 
@@ -178,7 +177,7 @@ class Main():
                 keep_going = False
             elif choice == &#39;3&#39;:
                 display.Display().print_rules()
-                keep_going = False
+                keep_going = True
             elif choice == &#39;4&#39;:
                 game.Game().exit_choice()
             else:
@@ -192,7 +191,10 @@ class Main():
 
                     if player_won:
                         print(player1.name + &#34; won!&#34;)
-                        highscore.Highscore().add_highscore(player1.rolls, player1.name)
+                        highscore.Highscore().add_highscore(
+                            player1.rolls,
+                            player1.name
+                        )
                         print(&#34;Added rolls to highscore list&#34;)
                         game.Game().exit_choice()
 
@@ -218,7 +220,7 @@ class Main():
                     if player_won:
                         print(player1.name + &#34; won!&#34;)
                         highscore.Highscore().add_highscore(
-                        player1.rolls, player1.name
+                            player1.rolls, player1.name
                         )
                         print(&#34;Added rolls to highscore list&#34;)
                         game.Game().exit_choice()
@@ -235,7 +237,7 @@ class Main():
                     if player_won:
                         print(player2.name + &#34; won!&#34;)
                         highscore.Highscore().add_highscore(
-                        player2.rolls, player2.name
+                            player2.rolls, player2.name
                         )
                         print(&#34;Added rolls to highscore list&#34;)
                         game.Game().exit_choice()
@@ -245,8 +247,6 @@ class Main():
                         player1.clean_score()
                         player2.clean_score()
                         player_turn = 1
-
-
 
     if __name__ == &#39;__main__&#39;:
         main()</code></pre>
@@ -272,7 +272,6 @@ class Main():
     print(&#34;Welcome to the game!&#34;)
     display.Display().print_start_menu()
 
-
     while keep_going:
         choice = input(&#34;..: &#34;)
 
@@ -285,7 +284,7 @@ class Main():
             keep_going = False
         elif choice == &#39;3&#39;:
             display.Display().print_rules()
-            keep_going = False
+            keep_going = True
         elif choice == &#39;4&#39;:
             game.Game().exit_choice()
         else:
@@ -299,7 +298,10 @@ class Main():
 
                 if player_won:
                     print(player1.name + &#34; won!&#34;)
-                    highscore.Highscore().add_highscore(player1.rolls, player1.name)
+                    highscore.Highscore().add_highscore(
+                        player1.rolls,
+                        player1.name
+                    )
                     print(&#34;Added rolls to highscore list&#34;)
                     game.Game().exit_choice()
 
@@ -325,7 +327,7 @@ class Main():
                 if player_won:
                     print(player1.name + &#34; won!&#34;)
                     highscore.Highscore().add_highscore(
-                    player1.rolls, player1.name
+                        player1.rolls, player1.name
                     )
                     print(&#34;Added rolls to highscore list&#34;)
                     game.Game().exit_choice()
@@ -342,7 +344,7 @@ class Main():
                 if player_won:
                     print(player2.name + &#34; won!&#34;)
                     highscore.Highscore().add_highscore(
-                    player2.rolls, player2.name
+                        player2.rolls, player2.name
                     )
                     print(&#34;Added rolls to highscore list&#34;)
                     game.Game().exit_choice()

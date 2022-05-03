@@ -37,6 +37,7 @@ import dice_graphics
 import sys
 import time
 
+
 class Game():
     &#34;&#34;&#34;Handle the game.&#34;&#34;&#34;
 
@@ -76,7 +77,7 @@ class Game():
         &#34;&#34;&#34;Create a dice object.&#34;&#34;&#34;
         self.dice = dice.Dice()
 
-    def roll(self, dice):
+    def roll(self):
         &#34;&#34;&#34;Handle choosing to roll a dice.&#34;&#34;&#34;
         self.dice_graphics = dice_graphics.DiceGraphics()
         roll = self.dice.roll_dice()
@@ -110,13 +111,8 @@ class Game():
 
         return self.continue_turn
 
-    def hold(self, player, dice):
-        &#34;&#34;&#34;Handle choosing to hold.&#34;&#34;&#34;
-        player.add_score(self.dice.turn_total, self.dice.rolls_made)
-
-
     def delete_dice(self):
-        &#34;&#34;&#34;Deletes a dice object.&#34;&#34;&#34;
+        &#34;&#34;&#34;Delete a dice object.&#34;&#34;&#34;
         del self.dice
 
     def exit_choice(self):
@@ -137,7 +133,7 @@ class Game():
         while keep_going:
             time.sleep(1)
 
-            continue_turn = self.roll(self.dice)
+            continue_turn = self.roll()
 
             if continue_turn:
                 if max_rolls &gt; 0:
@@ -174,7 +170,7 @@ class Game():
             choice = input(&#34;..: &#34;)
 
             if choice == &#39;1&#39;:
-                continue_turn = self.roll(self.dice)
+                continue_turn = self.roll()
                 if not continue_turn:
                     keep_going = False
 
@@ -268,7 +264,7 @@ class Game():
         &#34;&#34;&#34;Create a dice object.&#34;&#34;&#34;
         self.dice = dice.Dice()
 
-    def roll(self, dice):
+    def roll(self):
         &#34;&#34;&#34;Handle choosing to roll a dice.&#34;&#34;&#34;
         self.dice_graphics = dice_graphics.DiceGraphics()
         roll = self.dice.roll_dice()
@@ -302,13 +298,8 @@ class Game():
 
         return self.continue_turn
 
-    def hold(self, player, dice):
-        &#34;&#34;&#34;Handle choosing to hold.&#34;&#34;&#34;
-        player.add_score(self.dice.turn_total, self.dice.rolls_made)
-
-
     def delete_dice(self):
-        &#34;&#34;&#34;Deletes a dice object.&#34;&#34;&#34;
+        &#34;&#34;&#34;Delete a dice object.&#34;&#34;&#34;
         del self.dice
 
     def exit_choice(self):
@@ -329,7 +320,7 @@ class Game():
         while keep_going:
             time.sleep(1)
 
-            continue_turn = self.roll(self.dice)
+            continue_turn = self.roll()
 
             if continue_turn:
                 if max_rolls &gt; 0:
@@ -366,7 +357,7 @@ class Game():
             choice = input(&#34;..: &#34;)
 
             if choice == &#39;1&#39;:
-                continue_turn = self.roll(self.dice)
+                continue_turn = self.roll()
                 if not continue_turn:
                     keep_going = False
 
@@ -433,7 +424,7 @@ class Game():
     while keep_going:
         time.sleep(1)
 
-        continue_turn = self.roll(self.dice)
+        continue_turn = self.roll()
 
         if continue_turn:
             if max_rolls &gt; 0:
@@ -472,13 +463,13 @@ class Game():
 <span>def <span class="ident">delete_dice</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Deletes a dice object.</p></div>
+<div class="desc"><p>Delete a dice object.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def delete_dice(self):
-    &#34;&#34;&#34;Deletes a dice object.&#34;&#34;&#34;
+    &#34;&#34;&#34;Delete a dice object.&#34;&#34;&#34;
     del self.dice</code></pre>
 </details>
 </dd>
@@ -494,20 +485,6 @@ class Game():
 <pre><code class="python">def exit_choice(self):
     &#34;&#34;&#34;Exit the program.&#34;&#34;&#34;
     sys.exit(&#34;Exiting game&#34;)</code></pre>
-</details>
-</dd>
-<dt id="game.Game.hold"><code class="name flex">
-<span>def <span class="ident">hold</span></span>(<span>self, player, dice)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Handle choosing to hold.</p></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def hold(self, player, dice):
-    &#34;&#34;&#34;Handle choosing to hold.&#34;&#34;&#34;
-    player.add_score(self.dice.turn_total, self.dice.rolls_made)</code></pre>
 </details>
 </dd>
 <dt id="game.Game.multiplayer"><code class="name flex">
@@ -531,7 +508,7 @@ class Game():
 </details>
 </dd>
 <dt id="game.Game.roll"><code class="name flex">
-<span>def <span class="ident">roll</span></span>(<span>self, dice)</span>
+<span>def <span class="ident">roll</span></span>(<span>self)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Handle choosing to roll a dice.</p></div>
@@ -539,7 +516,7 @@ class Game():
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def roll(self, dice):
+<pre><code class="python">def roll(self):
     &#34;&#34;&#34;Handle choosing to roll a dice.&#34;&#34;&#34;
     self.dice_graphics = dice_graphics.DiceGraphics()
     roll = self.dice.roll_dice()
@@ -636,7 +613,7 @@ class Game():
         choice = input(&#34;..: &#34;)
 
         if choice == &#39;1&#39;:
-            continue_turn = self.roll(self.dice)
+            continue_turn = self.roll()
             if not continue_turn:
                 keep_going = False
 
@@ -693,7 +670,6 @@ class Game():
 <li><code><a title="game.Game.create_dice" href="#game.Game.create_dice">create_dice</a></code></li>
 <li><code><a title="game.Game.delete_dice" href="#game.Game.delete_dice">delete_dice</a></code></li>
 <li><code><a title="game.Game.exit_choice" href="#game.Game.exit_choice">exit_choice</a></code></li>
-<li><code><a title="game.Game.hold" href="#game.Game.hold">hold</a></code></li>
 <li><code><a title="game.Game.multiplayer" href="#game.Game.multiplayer">multiplayer</a></code></li>
 <li><code><a title="game.Game.roll" href="#game.Game.roll">roll</a></code></li>
 <li><code><a title="game.Game.rules" href="#game.Game.rules">rules</a></code></li>
