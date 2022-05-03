@@ -1,12 +1,13 @@
 """Hold functions used while playing the game."""
 
-from game import dice
-from game import player
-from game import bot
-from game import display
-from game import dice_graphics
+import dice
+import player
+import bot
+import display
+import dice_graphics
 import sys
 import time
+
 
 class Game():
     """Handle the game."""
@@ -47,7 +48,7 @@ class Game():
         """Create a dice object."""
         self.dice = dice.Dice()
 
-    def roll(self, dice):
+    def roll(self):
         """Handle choosing to roll a dice."""
         self.dice_graphics = dice_graphics.DiceGraphics()
         roll = self.dice.roll_dice()
@@ -81,13 +82,8 @@ class Game():
 
         return self.continue_turn
 
-    def hold(self, player, dice):
-        """Handle choosing to hold."""
-        player.add_score(self.dice.turn_total, self.dice.rolls_made)
-
-
     def delete_dice(self):
-        """Deletes a dice object."""
+        """Delete a dice object."""
         del self.dice
 
     def exit_choice(self):
@@ -108,7 +104,7 @@ class Game():
         while keep_going:
             time.sleep(1)
 
-            continue_turn = self.roll(self.dice)
+            continue_turn = self.roll()
 
             if continue_turn:
                 if max_rolls > 0:
@@ -145,7 +141,7 @@ class Game():
             choice = input("..: ")
 
             if choice == '1':
-                continue_turn = self.roll(self.dice)
+                continue_turn = self.roll()
                 if not continue_turn:
                     keep_going = False
 

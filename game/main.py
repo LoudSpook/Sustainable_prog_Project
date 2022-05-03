@@ -1,27 +1,22 @@
 """Run the game."""
 
-from game import game
-from game import display
-from game import player
-from game import highscore
+import game
+import display
+import highscore
+
 
 class Main():
     """Handle running the game."""
 
-    keep_going = True
-    player_turn = 1
-    bot = False
-    game_in_progress = True
-
-    def __init__(self):
-        """Initiate object."""
-
-    def main(self):
+    def main():
         """Run the game."""
+        keep_going = True
+        player_turn = 1
+        bot = False
+        game_in_progress = True
 
         print("Welcome to the game!")
         display.Display().print_start_menu()
-
 
         while keep_going:
             choice = input("..: ")
@@ -35,7 +30,7 @@ class Main():
                 keep_going = False
             elif choice == '3':
                 display.Display().print_rules()
-                keep_going = False
+                keep_going = True
             elif choice == '4':
                 game.Game().exit_choice()
             else:
@@ -49,7 +44,10 @@ class Main():
 
                     if player_won:
                         print(player1.name + " won!")
-                        highscore.Highscore().add_highscore(player1.rolls, player1.name)
+                        highscore.Highscore().add_highscore(
+                            player1.rolls,
+                            player1.name
+                        )
                         print("Added rolls to highscore list")
                         game.Game().exit_choice()
 
@@ -75,7 +73,7 @@ class Main():
                     if player_won:
                         print(player1.name + " won!")
                         highscore.Highscore().add_highscore(
-                        player1.rolls, player1.name
+                            player1.rolls, player1.name
                         )
                         print("Added rolls to highscore list")
                         game.Game().exit_choice()
@@ -92,7 +90,7 @@ class Main():
                     if player_won:
                         print(player2.name + " won!")
                         highscore.Highscore().add_highscore(
-                        player2.rolls, player2.name
+                            player2.rolls, player2.name
                         )
                         print("Added rolls to highscore list")
                         game.Game().exit_choice()
@@ -103,8 +101,5 @@ class Main():
                         player2.clean_score()
                         player_turn = 1
 
-
-
-if __name__ == '__main__':
-    main1 = Main()
-    main1.main()
+    if __name__ == '__main__':
+        main()

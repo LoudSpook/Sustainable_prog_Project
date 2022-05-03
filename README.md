@@ -82,10 +82,10 @@ The example program can be started like this.
 
 ```
 # Execute the main program
-python guess/main.py
+python game/main.py
 ```
 
-All code is stored below the directory `guess/`.
+All code is stored below the directory `game/`.
 
 
 
@@ -102,7 +102,7 @@ make pylint
 make lint
 ```
 
-You might need to update the Makefile if you change the name of the source directory currently named `guess/`.
+You might need to update the Makefile if you change the name of the source directory currently named `game/`.
 
 Read more on:
 
@@ -121,6 +121,7 @@ make unittest
 
 # Run unittests with coverage
 make coverage
+# You also need to add "from game" in front of every import in game.py and main.py. Except for import sys and import time in game.py.
 
 # Run the linters and the unittests with coverage
 make test

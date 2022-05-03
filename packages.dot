@@ -1,0 +1,13 @@
+digraph "packages" {
+rankdir=BT
+charset="utf-8"
+"game" [color="black", label="game", shape="box", style="solid"];
+"game.bot" [color="black", label="game.bot", shape="box", style="solid"];
+"game.dice" [color="black", label="game.dice", shape="box", style="solid"];
+"game.dice_graphics" [color="black", label="game.dice_graphics", shape="box", style="solid"];
+"game.display" [color="black", label="game.display", shape="box", style="solid"];
+"game.game" [color="black", label="game.game", shape="box", style="solid"];
+"game.highscore" [color="black", label="game.highscore", shape="box", style="solid"];
+"game.main" [color="black", label="game.main", shape="box", style="solid"];
+"game.player" [color="black", label="game.player", shape="box", style="solid"];
+}

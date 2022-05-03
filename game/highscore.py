@@ -1,6 +1,5 @@
 """Handle highscores."""
 
-import os
 
 class Highscore():
     """Handle the class."""
@@ -9,9 +8,10 @@ class Highscore():
         """Initiate object."""
 
     def add_highscore(self, rolls, name):
+        """Add the score of a user in the appropriate place."""
         last = True
 
-        with open(r'C:\Users\adamh\Desktop\Sustainable_prog_Project\game\highscores.txt', 'r') as file:
+        with open(r'path to file.txt', 'r') as file:
             content = file.readlines()
 
         for line in content:
@@ -28,7 +28,7 @@ class Highscore():
                     file.close()
                     last = False
                     break
-                
+
         if last:
             rolls = str(rolls)
             rolls += "\n"

@@ -35,7 +35,7 @@ class Bot():
         return self.difficulty
 
     def add_score(self, score_to_add, rolls_to_add):
-        """Add a bot's score from that round to its total"""
+        """Add a bot's score from that round to its total."""
         self.score += score_to_add
         self.rolls += rolls_to_add
 
