@@ -1,5 +1,3 @@
-Instructions of how to install and run project
-
 Basic description of the program
 -----------------------
 This is a representation of a simple dice game called pig.
